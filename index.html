@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>AgriVolt — Machine solaire multifonctionnelle</title>
+  <meta name="description" content="AgriVolt — Machine agricole multifonctionnelle à énergie solaire pour petits et moyens producteurs." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#f8faf7; --card:#ffffff; --muted:#6b7280; --green:#16a34a; --yellow:#f59e0b;
+      --maxw:1100px;
+      font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:#0f172a;line-height:1.45}
+    .container{max-width:var(--maxw);margin:0 auto;padding:28px}
+    header{display:flex;align-items:center;justify-content:space-between;padding:10px 0}
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--yellow),#ffeda6);display:flex;align-items:center;justify-content:center;box-shadow:0 6px 18px rgba(15,23,42,0.06)}
+    .logo svg{width:26px;height:26px;color:white}
+    h1.site{margin:0;font-size:18px;font-weight:700}
+    p.sub{margin:0;color:var(--muted);font-size:13px}
+    nav{display:flex;gap:18px}
+    nav a{color:var(--muted);text-decoration:none;font-size:14px}
+    nav a:hover{color:#0f172a}
+
+    /* Hero */
+    .hero{display:grid;grid-template-columns:1fr;gap:18px;align-items:center;margin-top:18px}
+    .hero-card{background:var(--card);border-radius:14px;padding:22px;box-shadow:0 8px 30px rgba(2,6,23,0.06)}
+    .hero h2{margin:0;font-size:28px;line-height:1.05}
+    .hero p{color:var(--muted);margin-top:12px}
+    .cta-row{margin-top:18px;display:flex;gap:12px;flex-wrap:wrap}
+    .btn{display:inline-block;padding:10px 16px;border-radius:10px;text-decoration:none;font-weight:600;cursor:pointer}
+    .btn-primary{background:var(--green);color:white}
+    .btn-ghost{background:transparent;border:1px solid #e6e9ec;color:#0f172a}
+
+    .hero-media{border-radius:12px;overflow:hidden;height:280px}
+    .hero-media img{width:100%;height:100%;object-fit:cover;display:block}
+
+    /* Features */
+    .grid{display:grid;gap:16px}
+    .features{grid-template-columns:repeat(3,1fr);margin-top:20px}
+    .card{background:var(--card);padding:18px;border-radius:12px;box-shadow:0 6px 20px rgba(2,6,23,0.04)}
+    .card h3{margin:6px 0 8px;font-size:16px}
+    .card p{margin:0;color:var(--muted);font-size:14px}
+
+    /* two column */
+    .two-col{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:20px}
+    .list{margin:0;padding-left:18px;color:var(--muted)}
+    .list li{margin-bottom:8px}
+
+    /* Impact */
+    .impact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:16px}
+
+    /* Team & Market */
+    .section{margin-top:28px}
+    .team-list{list-style:disc;margin-left:18px;color:var(--muted)}
+
+    /* contact */
+    .contact-card{background:linear-gradient(180deg,white,#fbfff7);padding:18px;border-radius:12px;box-shadow:0 8px 24px rgba(2,6,23,0.05)}
+    .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    input,textarea{width:100%;padding:10px;border:1px solid #e6e9ec;border-radius:8px;font-size:14px}
+    textarea{min-height:110px;resize:vertical}
+    .contact-actions{display:flex;gap:10px;margin-top:10px;flex-wrap:wrap}
+
+    footer{margin-top:36px;padding:16px 0;color:var(--muted);font-size:13px;text-align:center}
+
+    /* responsive */
+    @media (max-width:900px){
+      .features{grid-template-columns:repeat(1,1fr)}
+      .hero{grid-template-columns:1fr}
+      .two-col{grid-template-columns:1fr}
+      .impact-grid{grid-template-columns:1fr}
+      .form-grid{grid-template-columns:1fr}
+      nav{display:none}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo" aria-hidden="true">
+          <!-- simple sun icon -->
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="3.5"></circle>
+            <path d="M12 2v1.5M12 20.5V22M4.2 4.2l1.1 1.1M18.7 18.7l1.1 1.1M2 12h1.5M20.5 12H22M4.2 19.8l1.1-1.1M18.7 5.3l1.1-1.1"></path>
+          </svg>
+        </div>
+        <div>
+          <h1 class="site">AgriVolt</h1>
+          <p class="sub">Machine solaire qui défriche, sarcle et entretient les champs</p>
+        </div>
+      </div>
+
+      <nav aria-label="Main navigation">
+        <a href="#solution">Solution</a>
+        <a href="#features">Fonctions</a>
+        <a href="#impact">Impact</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-card">
+        <h2>AgriVolt — la machine solaire qui défriche, sarcle et entretient les champs</h2>
+        <p>Une machine multifonctionnelle, 100 % solaire, conçue pour alléger le travail des petits et moyens producteurs, réduire l'usage d'herbicides et supprimer le besoin en carburant.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="#contact">Demander un pilote</a>
+          <a class="btn btn-ghost" href="#features">Voir les fonctionnalités</a>
+        </div>
+
+        <div style="display:flex;gap:12px;margin-top:18px;">
+          <div style="background:white;padding:10px;border-radius:10px;flex:1;">
+            <strong>Énergie solaire</strong><div style="color:var(--muted);font-size:13px">Pas de carburant, coûts réduits</div>
+          </div>
+          <div style="background:white;padding:10px;border-radius:10px;flex:1;">
+            <strong>Multifonction</strong><div style="color:var(--muted);font-size:13px">Défrichage, sarclage, traçage, épandage</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-media" aria-hidden="true">
+        <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?q=80&w=1600&auto=format&fit=crop&ixlib=rb-4.0.3&s=123456" alt="Prototype AgriVolt in field">
+      </div>
+    </section>
+
+    <!-- Solution -->
+    <section id="solution" class="section">
+      <div class="card">
+        <h3>Notre solution</h3>
+        <p style="color:var(--muted);margin-top:8px">AgriVolt est une machine agricole multifonctionnelle, alimentée par panneaux solaires et une batterie rechargeable. Elle est pensée pour la robustesse, l'entretien local et la modularité.</p>
+
+        <div id="features" class="features">
+          <div class="card">
+            <h3>Chaîne motrice solaire</h3>
+            <p>Panneaux haute performance et batterie pour une autonomie suffisante pour une journée de travail.</p>
+          </div>
+          <div class="card">
+            <h3>Outils modulables</h3>
+            <p>Interchangeables : défricheur, sarcleur, traceur de semis, épandeur de compost.</p>
+          </div>
+          <div class="card">
+            <h3>Design rural-friendly</h3>
+            <p>Construction robuste, pièces facilement remplaçables, maintenance locale</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How it works / Why it matters -->
+    <section class="two-col">
+      <div class="card">
+        <h3>Comment ça marche</h3>
+        <ol class="list" style="margin-top:10px">
+          <li>Les panneaux chargent la batterie pendant la journée.</li>
+          <li>L'opérateur fixe l'outil requis (défricheur, sarcleur, traceur...).</li>
+          <li>Le moteur électrique alimente l'outil ; la machine se manœuvre depuis des poignées ergonomiques.</li>
+          <li>Maintenance simple et réparations locales possibles.</li>
+        </ol>
+      </div>
+      <div class="card">
+        <h3>Pourquoi c'est important</h3>
+        <ul class="list" style="margin-top:10px">
+          <li>Réduit le travail manuel et augmente la superficie cultivable.</li>
+          <li>Économise sur le carburant et limite l'utilisation d'herbicides.</li>
+          <li>Crée des emplois locaux (fabrication, maintenance).</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Impact -->
+    <section id="impact" class="section">
+      <h3 style="margin-bottom:8px">Impact</h3>
+      <div class="impact-grid">
+        <div class="card">
+          <h3>Économique</h3>
+          <p>Réduction des coûts, hausse des rendements, revenus améliorés pour petites exploitations.</p>
+        </div>
+        <div class="card">
+          <h3>Social</h3>
+          <p>Moins de pénibilité, formation et emplois locaux, autonomisation des agriculteurs.</p>
+        </div>
+        <div class="card">
+          <h3>Environnemental</h3>
+          <p>Émissions réduites, préservation des sols, moindre recours aux herbicides.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Market & Team -->
+    <section class="section">
+      <div class="card">
+        <div style="display:flex;gap:20px;flex-direction:column">
+          <div>
+            <h3>Marché</h3>
+            <p style="color:var(--muted)">Ciblons les petits et moyens exploitants, coopératives et projets de développement en Afrique de l'Ouest. Moins de 10% des exploitations sont mécanisées — fort potentiel.</p>
+          </div>
+          <div>
+            <h3>Équipe</h3>
+            <ul class="team-list">
+              <li><strong>Affi Noëline AYEBOU</strong> — Agronome & cheffe de projet</li>
+              <li><strong>Casimir KOUISSODE</strong> — Responsable technique & prototype</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section">
+      <div class="contact-card">
+        <h3>Contact & Pilotes</h3>
+        <p style="color:var(--muted)">Intéressé(e) par un pilote, un partenariat ou du financement ? Écris-nous.</p>
+
+        <form id="contactForm" onsubmit="return handleSubmit(event)" style="margin-top:12px">
+          <div class="form-grid">
+            <input id="name" type="text" placeholder="Votre nom" required>
+            <input id="email" type="email" placeholder="Email" required>
+            <textarea id="message" placeholder="Message (ex: demande pilote, partenariat)" required></textarea>
+          </div>
+
+          <div class="contact-actions">
+            <button class="btn btn-primary" type="submit">Envoyer</button>
+            <a class="btn" href="mailto:hello@agrivolt.example">Email: hello@agrivolt.example</a>
+            <a class="btn" href="https://wa.me/22960000000" target="_blank">WhatsApp</a>
+          </div>
+
+          <p id="formStatus" style="color:var(--muted);margin-top:10px;font-size:13px;display:none"></p>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      © <span id="year"></span> AgriVolt — Built for durability & smallholder impact
+    </footer>
+  </div>
+
+  <script>
+    // small script: year + fake submit handling
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    function handleSubmit(e){
+      e.preventDefault();
+      const status = document.getElementById('formStatus');
+      status.style.display = 'block';
+      status.textContent = 'Merci — votre message a été enregistré localement. (Pour l\'envoyer, configurez un backend ou utilisez mailto)';
+      // For now: open mail client with prefilled content
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
+      const subject = encodeURIComponent('Contact AgriVolt - ' + name);
+      const body = encodeURIComponent('Name: ' + name + '\\nEmail: ' + email + '\\n\\n' + message);
+      // Use mailto as fallback
+      window.location.href = `mailto:hello@agrivolt.example?subject=${subject}&body=${body}`;
+      return false;
+    }
+  </script>
+</body>
+</html>
